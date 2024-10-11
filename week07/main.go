@@ -1,14 +1,14 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
+	"os"
 )
 
 func main() {
-	var army string = "우리는 $가와 $민에 충성을 다하는 대한민$ 육군이다."
-	armyfixed := strings.NewReplacer("$", "국")
-	fmt.Println(army)
-	fmt.Println(armyfixed.Replace(army))
+	in := bufio.NewReader(os.Stdin)
+	i, _ := in.ReadString('\n')
+	fmt.Println(i)
 
 }
